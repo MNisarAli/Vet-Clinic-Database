@@ -132,3 +132,69 @@ SELECT owners.full_name, COUNT(*) FROM owners
 JOIN animals ON animals.owner_id = owners.id
 GROUP BY owners.full_name ORDER BY COUNT(*) DESC
 LIMIT 1;
+
+-- Last animal seen by William 
+SELECT a.name, v.date_of_visit FROM visits v
+JOIN animals a ON v.animal_id = a.id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'William Tatcher'
+ORDER BY v.date_of_visit DESC
+LIMIT 1;
+
+-- Count of animals treated by Stephanie
+SELECT COUNT(*) FROM visits v
+JOIN animals a ON v.animal_id = a.id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'Stephanie Mendez';
+
+-- List of vets and specialities
+SELECT vt.name, s.name FROM vets vt
+LEFT JOIN specializations sp ON vt.id = sp.vet_id
+LEFT JOIN species s ON s.id = sp.species_id;
+
+-- Animals that visited Stephanie between '2020-04-01' and '2020-08-30'
+SELECT a.name, v.date_of_visit FROM animals a
+JOIN visits v ON v.animal_id = a.id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'Stephanie Mendez'
+AND v.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+-- Animal with the most visits
+SELECT a.name, COUNT(*) FROM animals a
+JOIN visits v ON a.id = v.animal_id
+GROUP BY a.name 
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- Maisy's first visit 
+SELECT a.name, v.date_of_visit FROM vets vt
+JOIN visits v ON vt.id = v.vet_id
+JOIN animals a ON a.id = v.animal_id
+WHERE vt.name = 'Maisy Smith'
+ORDER BY v.date_of_visit
+LIMIT 1;
+
+-- Detail of most recent visit 
+SELECT v.date_of_visit, vt.*, a.* FROM vets vt
+JOIN visits v ON v.vet_id = vt.id
+JOIN animals a ON v.animal_id = a.id
+ORDER BY v.date_of_visit DESC
+LIMIT 1;
+
+-- Visits for each vet outside their specialization
+SELECT vt.name, COUNT(*) FROM vets vt
+JOIN visits v ON v.vet_id = vt.id
+JOIN animals a ON v.animal_id = a.id
+LEFT JOIN specializations sp ON sp.vet_id = vt.id
+WHERE sp.species_id != a.species_id OR sp.species_id IS NULL
+GROUP BY vt.name;
+
+-- Most treated species by Maisy
+SELECT s.name, COUNT(*) FROM vets vt
+JOIN visits v ON v.vet_id = vt.id
+JOIN animals a ON v.animal_id = a.id
+JOIN species s ON a.species_id = s.id
+WHERE vt.name = 'Maisy Smith'
+GROUP BY s.name
+ORDER BY COUNT(*) DESC
+LIMIT 1;
