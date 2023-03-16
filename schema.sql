@@ -34,8 +34,6 @@ DROP COLUMN species;
 
 ALTER TABLE animals
 
--- Add an index on the vet_id column of the visits table
-CREATE INDEX idx_visits_vet_id ON visits (vet_id);
 ADD COLUMN species_id INT,
 ADD FOREIGN KEY (species_id) REFERENCES species(id);
 
@@ -65,3 +63,12 @@ CREATE TABLE visits(
 
 -- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Add an index on the animal_id column of the visits table
+CREATE INDEX idx_visits_animal_id ON visits (animal_id);
+
+-- Add an index on the vet_id column of the visits table
+CREATE INDEX idx_visits_vet_id ON visits (vet_id);
+
+-- Add an index on the email column of the owners table
+CREATE INDEX idx_owners_email ON owners (email);
