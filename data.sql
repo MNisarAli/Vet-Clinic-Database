@@ -5,7 +5,7 @@ VALUES
 ('1', 'Agumon', '2020-02-03', '0', 'true', '10.23'),
 ('2', 'Gabumon', '2018-11-15', '2', 'true', '8'),
 ('3', 'Pikachu', '2021-01-07', '1', 'false', '15.04'),
-('4', 'Devimon', '2017-05-12', '5', 'true', '11')
+('4', 'Devimon', '2017-05-12', '5', 'true', '11'),
 ('5', 'Charmander', '2020-02-08', '0', 'false', '-11'),
 ('6', 'Plantmon', '2021-11-15', '2', 'true', '-5.7'),
 ('7', 'Squirtle', '1993-04-02', '3', 'false', '-12.13'),
@@ -93,3 +93,8 @@ VALUES
 ((SELECT id FROM animals WHERE name = 'Blossom'), 3, '2020-05-24'),
 ((SELECT id FROM animals WHERE name = 'Blossom'), 1, '2021-01-11');
 
+-- This will add 3.594.280 visits considering you have 10 animals, 4 vets, and it will use around ~87.000 timestamps (~4min approx.)
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp ON CONFLICT DO NOTHING;
+
+-- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
+insert into owners (full_name, email, age) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com', 0;
