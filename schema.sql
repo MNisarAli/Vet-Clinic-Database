@@ -33,6 +33,9 @@ ALTER TABLE animals
 DROP COLUMN species;
 
 ALTER TABLE animals
+
+-- Add an index on the vet_id column of the visits table
+CREATE INDEX idx_visits_vet_id ON visits (vet_id);
 ADD COLUMN species_id INT,
 ADD FOREIGN KEY (species_id) REFERENCES species(id);
 
