@@ -14,7 +14,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [� Getting Started ](#-getting-started-)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -28,6 +28,7 @@
 # 🐶 Vet Clinic Database <a name="about-project"></a>
 
 **Vet Clinic Database** is a plain SQL database to create the data structure for a vet clinic.
+![image](https://user-images.githubusercontent.com/101400298/225818545-bd4a3299-cb00-4b78-8375-379879613ad6.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -82,6 +83,17 @@ In order to run this project you need:
 - Gmail: [Muhammad Nisar Ali](mailto:dr.nisaralig@gmail.com)
 - LinkedIn: [Muhammad Nisar Ali](https://linkedin.com/in/muhammad-nisar-ali-45a865251)
 
+👤 **Billal Chami**
+
+- GitHub: [@bill7pearl](https://github.com/bill7pearl)
+- Twitter: [@BillChami](https://twitter.com/BillChami)
+- LinkedIn: [Billal Chami ](https://www.linkedin.com/in/billal-chami)
+
+👤 **Thinus Van De Venter**
+
+- GitHub: [@Thinus01](https://github.com/Thinus01)
+- Twitter: [@thinus_v_d_v](https://twitter.com/thinus_v_d_v)
+- LinkedIn: [Thinus Van De Venter](https://www.linkedin.com/in/thinus-van-de-venter-99aa26203)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
