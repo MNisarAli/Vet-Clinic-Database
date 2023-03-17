@@ -14,7 +14,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [� Getting Started ](#-getting-started-)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -28,6 +28,7 @@
 # 🐶 Vet Clinic Database <a name="about-project"></a>
 
 **Vet Clinic Database** is a plain SQL database to create the data structure for a vet clinic.
+![image](https://user-images.githubusercontent.com/101400298/225818545-bd4a3299-cb00-4b78-8375-379879613ad6.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
