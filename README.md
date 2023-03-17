@@ -83,6 +83,17 @@ In order to run this project you need:
 - Gmail: [Muhammad Nisar Ali](mailto:dr.nisaralig@gmail.com)
 - LinkedIn: [Muhammad Nisar Ali](https://linkedin.com/in/muhammad-nisar-ali-45a865251)
 
+👤 **Billal Chami**
+
+- GitHub: [@bill7pearl](https://github.com/bill7pearl)
+- Twitter: [@BillChami](https://twitter.com/BillChami)
+- LinkedIn: [Billal Chami ](https://www.linkedin.com/in/billal-chami)
+
+👤 **Thinus Van De Venter**
+
+- GitHub: [@Thinus01](https://github.com/Thinus01)
+- Twitter: [@thinus_v_d_v](https://twitter.com/thinus_v_d_v)
+- LinkedIn: [Thinus Van De Venter](https://www.linkedin.com/in/thinus-van-de-venter-99aa26203)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
